@@ -3,8 +3,8 @@
 import { redirectTo } from "@/utils/redirectTo";
 import { useEffect } from "react";
 
-export default function Home() {
+export default function Sales() {
   useEffect(() => {
-    redirectTo("/discover");
+    redirectTo("sales/1");
   });
 }

@@ -3,9 +3,86 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --white-0: rgba(255,255,255,0);
+  --white-25: rgba(255,255,255,0.03);
+  --white-50: rgba(255,255,255,0.07);
+  --white-100: rgba(255,255,255,0.1);
+  --white-200: rgba(255,255,255,0.2);
+  --white-300: rgba(255,255,255,0.3);
+  --white-400: rgba(255,255,255,0.4);
+  --white-500: rgba(255,255,255,0.5);
+  --white-600: rgba(255,255,255,0.6);
+  --white-700: rgba(255,255,255,0.7);
+  --white-800: rgba(255,255,255,0.8);
+  --white-900: rgba(255,255,255,0.9);
+  --white-950: rgba(255,255,255,0.95);
+  --white-1000: #FFF;
+
+  --black-25: rgba(0,0,0,0.03);
+  --black-50: rgba(0,0,0,0.07);
+  --black-100: rgba(0,0,0,0.1);
+  --black-200: rgba(0,0,0,0.2);
+  --black-300: rgba(0,0,0,0.3);
+  --black-400: rgba(0,0,0,0.4);
+  --black-500: rgba(0,0,0,0.5);
+  --black-600: rgba(0,0,0,0.6);
+  --black-700: rgba(0,0,0,0.7);
+  --black-800: rgba(0,0,0,0.8);
+  --black-900: rgba(0,0,0,0.9);
+  --black-950: rgba(0,0,0,0.95);
+  --black-1000: #000;
+
+  --neutral-25: #f9fafb;
+  --neutral-50: #f3f6f7;
+  --neutral-100: #e7edf0;
+  --neutral-200: #d1dae0;
+  --neutral-300: #a7b5c2;
+  --neutral-400: #8492a3;
+  --neutral-500: #667285;
+  --neutral-600: #4b5566;
+  --neutral-700: #333a47;
+  --neutral-800: #282e38;
+  --neutral-900: #1d2129;
+  --neutral-950: #12141a;
+
+  --indigo-50: #eef8fe;
+  --indigo-100: #def0fc;
+  --indigo-200: #cce5f8;
+  --indigo-300: #badaf4;
+  --indigo-400: #98bee6;
+  --indigo-500: #78a0d2;
+  --indigo-600: #5d82b8;
+  --indigo-700: #456598;
+  --indigo-800: #314975;
+  --indigo-900: #1f2f4f;
+  --indigo-950: #0f182a;
+
+  --aquamarine-25: #ebfef8;
+  --aquamarine-50: #d8fef1;
+  --aquamarine-100: #b1fce4;
+  --aquamarine-200: #8af8d6;
+  --aquamarine-300: #64f4c9;
+  --aquamarine-400: #23f4c9;
+  --aquamarine-500: #00d2a3;
+  --aquamarine-600: #00b89a;
+  --aquamarine-700: #00988b;
+  --aquamarine-800: #007375;
+  --aquamarine-900: #00454f;
+  --aquamarine-950: #00202a;
+
+  --error-25: #fffafa;
+  --error-50: #fef3f2;
+  --error-100: #fee4e2;
+  --error-200: #fecdca;
+  --error-300: #fda29b;
+  --error-400: #f98066;
+  --error-500: #f04438;
+  --error-600: #d92d20;
+  --error-700: #b32318;
+  --error-800: #91201B;
+  --error-900: #7a271a;
+  --error-950: #55160c;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,7 +94,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--white-1000);
   background: linear-gradient(
       to bottom,
       transparent,
@@ -30,4 +107,25 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+::-webkit-scrollbar {
+  border-radius: 12px;
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
