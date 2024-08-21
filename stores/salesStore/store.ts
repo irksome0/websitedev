@@ -7,8 +7,8 @@ export type SalesState = {
 export type SalesActions = {
     addOrder: (order: OrderModuleProps) => void;
     removeOrder: (id: string) => void;
-    updateOrderAttachments: (id: string, attachment?: File) => void;
-    updateOrderStatus: (id: string, updatedStatus: string) => void;
+    // updateOrderAttachments: (id: string, attachment?: File) => void;
+    // updateOrderStatus: (id: string, updatedStatus: string) => void;
 }
 
 export type SalesStore = SalesState & SalesActions;
@@ -23,13 +23,10 @@ export const createSalesStore = (
     return createStore<SalesStore>()((set)=> ({
         ...initState,
         addOrder(order) {
-            set((state)=> ([...state, order]))
+            set((state)=> ({...state, order}))
         },
         removeOrder(id) {
-            set((state) => (state.orders.filter(order => order.uuid != id)))
-        },
-        updateOrderAttachments(id, attachment) {
-            set((state) => ())
+            set((state) => ({...state, orders: state.orders.filter(order => order.uuid !== id)}))
         },
     }))
 }

@@ -14,7 +14,7 @@ const initialAttachmentsState = {
 };
 
 export const OrderModule = (props: OrderModuleProps) => {
-  const [atts, setAtts] = useState(initialAttachmentsState);
+  const [atts, setAtts] = useState<any>(initialAttachmentsState);
   // const [attachments, setAttachments] = useState([]);
   // const [inputValues, setInputValues] = useState([]);
 
@@ -43,7 +43,7 @@ export const OrderModule = (props: OrderModuleProps) => {
     <div className="flex w-full flex-col rounded-2xl border border-border-secondary bg-bg-secondary p-5">
       <div className="flex flex-row items-center justify-between pb-5">
         <h1 className="text-sm text-txt-secondary">
-          <b>You</b>'ve made an order with <b>{props.collaborator}</b>
+          <b>You</b>&apos;ve made an order with <b>{props.collaborator}</b>
         </h1>
         <div className="flex flex-row">
           <motion.button
@@ -84,12 +84,12 @@ export const OrderModule = (props: OrderModuleProps) => {
           ) : (
             <div>
               <input type="file" onChange={handleChangeAttachments} />
-              {atts.filesNames.map((element, index) => (
+              {atts.filesNames.map((element: string, index: number) => (
                 <h2 key={index} className="text-txt-secondary">
                   {(element as string).substring(12)}
                 </h2>
               ))}
-              {atts.attachments.map((element, index) => (
+              {atts.attachments.map((element: any, index: number) => (
                 <Image
                   key={index}
                   width={200}

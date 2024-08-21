@@ -89,3 +89,5 @@ export const CountryFilter = forwardRef((_props, ref) => {
     </div>
   );
 });
+
+CountryFilter.displayName = "CountryFilter";

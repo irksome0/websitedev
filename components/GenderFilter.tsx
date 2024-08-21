@@ -42,7 +42,7 @@ export const GenderFilter = forwardRef((_props, ref) => {
   const handleGenderToggle = (gender: string) => {
     const updatedGenders = {
       ...genders,
-      [gender]: !(genders[gender] as boolean),
+      [gender]: !(genders[gender as keyof GendersProps] as boolean),
     };
     selectGenders(updatedGenders);
   };
@@ -86,3 +86,5 @@ export const GenderFilter = forwardRef((_props, ref) => {
     </div>
   );
 });
+
+GenderFilter.displayName = "GenderFilter";

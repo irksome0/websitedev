@@ -184,3 +184,5 @@ export const CollaborationFilter = forwardRef((_props, ref) => {
     </div>
   );
 });
+
+CollaborationFilter.displayName = "CollaborationFilter";

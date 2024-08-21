@@ -11,9 +11,9 @@ import { CollaborationFilter } from "./CollaborationFilter";
 import { useRef } from "react";
 
 export const FiltersModal = (props: FiltersModalProps) => {
-  const collaborationFiltersRef = useRef();
-  const genderFiltersRef = useRef();
-  const countryFiltersRef = useRef();
+  const collaborationFiltersRef = useRef<any>();
+  const genderFiltersRef = useRef<any>();
+  const countryFiltersRef = useRef<any>();
 
   const clearAllFilters = () => {
     if (
