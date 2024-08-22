@@ -87,15 +87,16 @@ const Orders = [
     attachments: undefined,
   },
 ];
-
+export async function generateStaticParams() {
+  return [{ pageId: "1" }];
+}
 export default function SalesPage({ params }: { params: SalesPageParams }) {
+  const { pageId } = params;
   return (
     <main className="flex flex-col items-center bg-bg-tertiary pt-4">
       <SalesStoreProvider>
         <Header active="sales" />
-        <h1 className="text-3xl text-txt-secondary font-bold">
-          {params.pageId}
-        </h1>
+        <h1 className="text-3xl text-txt-secondary font-bold">{pageId}</h1>
         <section className="flex w-full flex-col items-center justify-center px-5 py-8">
           <h1 className="mb-5 font-medium text-header-2 text-txt-secondary">
             Your orders:
