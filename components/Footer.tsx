@@ -58,7 +58,7 @@ export const Footer = () => {
           <div className="h-[44px] w-[132px] rounded-lg border-2 border-yellow-500 border-dashed" />
           <div className="flex items-end">
             <p className="text-txt-queternary text-xs">
-              &#64; ... inc. all rights reserved
+              &#64; CoCreate inc. all rights reserved
             </p>
           </div>
         </div>

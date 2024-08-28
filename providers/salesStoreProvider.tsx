@@ -1,6 +1,6 @@
 "use client";
 
-import { createSalesStore, SalesStore } from "@/stores/salesStore/store";
+import { createSalesStore, type SalesStore } from "@/stores/salesStore/store";
 import { type ReactNode, createContext, useRef, useContext } from "react";
 import { useStore } from "zustand";
 
@@ -29,7 +29,7 @@ export const SalesStoreProvider = ({ children }: SalesStoreProviderProps) => {
 export const useSalesStore = <T,>(selector: (store: SalesStore) => T): T => {
   const salesStoreContext = useContext(SalesStoreContext);
   if (!salesStoreContext) {
-    throw new Error("useFiltersStore must be used within FiltersStoreProvider");
+    throw new Error("useSalesStore must be used within SalesStoreProvider");
   }
 
   return useStore(salesStoreContext, selector);

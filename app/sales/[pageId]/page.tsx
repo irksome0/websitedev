@@ -2,91 +2,11 @@ import { Header } from "@/components/Header";
 import { SalesMenu } from "@/components/SalesMenu";
 import { OrdersModule } from "@/components/OrdersModule";
 import { Footer } from "@/components/Footer";
-import { OrderModule } from "@/components/OrderModule";
 import { SalesStoreProvider } from "@/providers/salesStoreProvider";
+import { PagesSwitchPanel } from "@/components/PagesSwitchPanel";
+import { Orders } from "@/components/Orders";
+import { getAmountOfSales } from "@/utils/getAmountOfSales";
 
-const Orders = [
-  {
-    collaborator: "Skiper",
-    platform: "Youtube",
-    price: 20,
-    comment:
-      "I want it to be so gracious that even MrBeast will notice my video!!",
-    attachments: undefined,
-  },
-  {
-    collaborator: "Skiper",
-    platform: "Youtube",
-    price: 20,
-    comment:
-      "I want it to be so gracious that even MrBeast will notice my video!!",
-    attachments: undefined,
-  },
-  {
-    collaborator: "Skiper",
-    platform: "Youtube",
-    price: 20,
-    comment:
-      "I want it to be so gracious that even MrBeast will notice my video!!",
-    attachments: undefined,
-  },
-  {
-    collaborator: "Skiper",
-    platform: "Youtube",
-    price: 20,
-    comment:
-      "I want it to be so gracious that even MrBeast will notice my video!!",
-    attachments: undefined,
-  },
-  {
-    collaborator: "Skiper",
-    platform: "Youtube",
-    price: 20,
-    comment:
-      "I want it to be so gracious that even MrBeast will notice my video!!",
-    attachments: undefined,
-  },
-  {
-    collaborator: "Skiper",
-    platform: "Youtube",
-    price: 20,
-    comment:
-      "I want it to be so gracious that even MrBeast will notice my video!!",
-    attachments: undefined,
-  },
-  {
-    collaborator: "Skiper",
-    platform: "Youtube",
-    price: 20,
-    comment:
-      "I want it to be so gracious that even MrBeast will notice my video!!",
-    attachments: undefined,
-  },
-  {
-    collaborator: "Skiper",
-    platform: "Youtube",
-    price: 20,
-    comment:
-      "I want it to be so gracious that even MrBeast will notice my video!!",
-    attachments: undefined,
-  },
-  {
-    collaborator: "Skiper",
-    platform: "Youtube",
-    price: 20,
-    comment:
-      "I want it to be so gracious that even MrBeast will notice my video!!",
-    attachments: undefined,
-  },
-  {
-    collaborator: "Skiper",
-    platform: "Youtube",
-    price: 20,
-    comment:
-      "I want it to be so gracious that even MrBeast will notice my video!!",
-    attachments: undefined,
-  },
-];
 export async function generateStaticParams() {
   return [{ pageId: "1" }];
 }
@@ -108,16 +28,7 @@ export default function SalesPage({ params }: { params: SalesPageParams }) {
           </div>
         </section>
         <div className="flex w-full flex-col gap-5 px-5 py-5">
-          {Orders.map((element, index) => (
-            <OrderModule
-              key={index}
-              collaborator={element.collaborator}
-              platform={element.platform}
-              price={element.price}
-              comment={element.comment}
-              attachments={element.attachments}
-            />
-          ))}
+          <Orders page={Number.parseInt(pageId)} />
         </div>
         <Footer />
       </SalesStoreProvider>

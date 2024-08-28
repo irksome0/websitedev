@@ -73,6 +73,7 @@ interface OrderModuleProps{
   price: number;
   comment?: string;
   attachments?: File;
+  type:string;
 }
 // biome-ignore lint/correctness/noUnusedVariables: type
 interface OrderState{
@@ -92,4 +93,8 @@ interface OrderProgressProps{
 // biome-ignore lint/correctness/noUnusedVariables: type
 interface SalesPageParams{
   pageId: string;
+}
+// biome-ignore lint/correctness/noUnusedVariables: type
+interface PagesSwitchPanelProps{
+  amountOfPages: number;
 }

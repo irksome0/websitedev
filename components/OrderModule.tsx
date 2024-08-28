@@ -107,7 +107,7 @@ export const OrderModule = (props: OrderModuleProps) => {
             <h1 className="font-medium text-base text-txt-queternary">
               Platform
             </h1>
-            <hr className="w-96 border border-border-secondary border-dashed" />
+            <hr className="w-[90%] border border-border-secondary border-dashed" />
             <h1 className="border border-border-secondary px-3 py-1 font-medium text-base text-txt-queternary">
               {props.platform}
             </h1>
@@ -125,7 +125,7 @@ export const OrderModule = (props: OrderModuleProps) => {
           <div className="w-full rounded-lg border border-border-secondary px-3 py-1 text-sm text-txt-supp-secondary">
             {props.comment}
           </div>
-          <OrderProgress type="payment" collaborator={props.collaborator} />
+          <OrderProgress type={props.type} collaborator={props.collaborator} />
         </div>
       </div>
     </div>

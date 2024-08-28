@@ -94,7 +94,7 @@ export const MenuPopup = (props: PopupProps) => {
           whileTap="tap"
           variants={logoutButtonVariants}
           transition={{ duration: 0.2, ease: "easeIn" }}
-          className="focus:z-10 focus:border-border-error-primary border-error-tertiary outline-border-primary outline-offset-2 outline-2 flex flex-row items-start py-3 px-3 text-txt-error-primary w-full font-medium gap-2 border-2 rounded-xl"
+          className="focus:z-10 focus:border-border-error-primary border-fg-error-primary outline-border-primary outline-offset-2 outline-2 flex flex-row items-start py-3 px-3 text-txt-error-primary w-full font-medium gap-2 border-2 rounded-xl"
         >
           <motion.span
             className="material-symbols-outlined"
