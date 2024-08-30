@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { liVariants, hrVariants } from "./variants/headerVariants";
 import { pVariants } from "./variants/headerVariants";

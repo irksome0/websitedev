@@ -6,6 +6,8 @@ import {
   buttonVariants,
   logoutButtonVariants,
 } from "./variants/buttonsVariants";
+import { logout } from "@/utils/logout";
+import { redirectTo } from "@/utils/redirectTo";
 
 const variants = {
   open: { width: 400, opacity: 1, x: "-55%", y: "0%" },
@@ -13,6 +15,10 @@ const variants = {
 };
 
 export const MenuPopup = (props: PopupProps) => {
+  const onLogout = () => {
+    logout();
+    redirectTo("signin");
+  };
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     setIsOpen(props.open);
@@ -89,7 +95,7 @@ export const MenuPopup = (props: PopupProps) => {
           Settings
         </motion.button>
         <motion.button
-          onClick={() => console.log("test")}
+          onClick={() => onLogout()}
           whileHover="hover"
           whileTap="tap"
           variants={logoutButtonVariants}

@@ -3,20 +3,30 @@ import { SalesMenu } from "@/components/SalesMenu";
 import { OrdersModule } from "@/components/OrdersModule";
 import { Footer } from "@/components/Footer";
 import { SalesStoreProvider } from "@/providers/salesStoreProvider";
-import { PagesSwitchPanel } from "@/components/PagesSwitchPanel";
 import { Orders } from "@/components/Orders";
-import { getAmountOfSales } from "@/utils/getAmountOfSales";
+import { createClient } from "@/utils/supabase/server";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 export async function generateStaticParams() {
   return [{ pageId: "1" }];
 }
-export default function SalesPage({ params }: { params: SalesPageParams }) {
+export default async function SalesPage({
+  params,
+}: {
+  params: SalesPageParams;
+}) {
+  const supabase = createClient();
+  const { data, error } = await supabase.auth.getUser();
+  if (error || !data?.user) {
+    revalidatePath("/signin", "layout");
+    redirect("/signin");
+  }
   const { pageId } = params;
   return (
     <main className="flex flex-col items-center bg-bg-tertiary pt-4">
       <SalesStoreProvider>
         <Header active="sales" />
-        <h1 className="text-3xl text-txt-secondary font-bold">{pageId}</h1>
         <section className="flex w-full flex-col items-center justify-center px-5 py-8">
           <h1 className="mb-5 font-medium text-header-2 text-txt-secondary">
             Your orders:
