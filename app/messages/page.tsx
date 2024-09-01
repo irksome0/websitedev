@@ -13,7 +13,14 @@ export default async function Messages() {
   }
   return (
     <main className="flex flex-col items-center bg-bg-tertiary pt-4">
-      <Header active="messages" />
+      <Header
+        active="messages"
+        user={{
+          name: "user",
+          surname: "",
+          email: data.user.email,
+        }}
+      />
       Messages
       <Footer />
     </main>

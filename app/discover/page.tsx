@@ -17,7 +17,14 @@ export default async function Discover() {
   return (
     <main className="flex flex-col items-center bg-bg-tertiary pt-4">
       <FiltersStoreProvider>
-        <Header active="discover" />
+        <Header
+          active="discover"
+          user={{
+            name: "user",
+            surname: "",
+            email: data.user.email,
+          }}
+        />
         <Search />
         <Footer />
       </FiltersStoreProvider>

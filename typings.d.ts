@@ -9,6 +9,7 @@ interface OptionButtonProps {
 // biome-ignore lint/correctness/noUnusedVariables: type
 interface HeaderProps {
   active: string;
+  user: UserState;
 }
 interface UserState {
   name: string | undefined;

@@ -15,11 +15,7 @@ import { NavigationItem } from "./NavigationItem";
 import messagesIcon from "@/public/messages-icon.svg";
 
 export const Header = (props: HeaderProps) => {
-  const [user, setUser] = useState<UserState>({
-    name: "John",
-    surname: "Doe",
-    email: "john.doe@mail.com",
-  });
+  const [user, setUser] = useState<UserState>(props.user);
   const [messages, setMessages] = useState<number>(2333);
   const [menuText, setMenuText] = useState<string>(user.email as string);
   const [displayMenu, setDisplayMenu] = useState<boolean>(false);
@@ -29,11 +25,7 @@ export const Header = (props: HeaderProps) => {
 
   const handleSetMessages = () => {
     setMessages(2333);
-    setUser({
-      name: "John",
-      surname: "Doe",
-      email: "john.doe@mail.com",
-    });
+    setUser(props.user);
   };
   const openMenu = () => {
     setDisplayMenu((prev) => !prev);

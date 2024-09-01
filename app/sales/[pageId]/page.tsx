@@ -26,7 +26,14 @@ export default async function SalesPage({
   return (
     <main className="flex flex-col items-center bg-bg-tertiary pt-4">
       <SalesStoreProvider>
-        <Header active="sales" />
+        <Header
+          active="sales"
+          user={{
+            name: "user",
+            surname: "",
+            email: data.user.email,
+          }}
+        />
         <section className="flex w-full flex-col items-center justify-center px-5 py-8">
           <h1 className="mb-5 font-medium text-header-2 text-txt-secondary">
             Your orders:
