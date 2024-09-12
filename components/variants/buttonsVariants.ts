@@ -35,18 +35,18 @@ export const logoutButtonVariants = {
   };
 export const applyButtonVariants = {
   initial: {
-    borderColor: "var(--aquamarine-600)",
-    background: "var(--aquamarine-500)",
+    borderColor: "var(--aquamarine-700)",
+    background: "var(--aquamarine-600)",
     color: "var(--aquamarine-50)",
   },
   hover: {
     borderColor: "var(--aquamarine-600)",
-    background: "var(--aquamarine-400)",
+    background: "var(--aquamarine-500)",
     color: "var(--aquamarine-50)",
   },
   tap: {
-    borderColor: "var(--aquamarine-800)",
-    background: "var(--aquamarine-700)",
+    borderColor: "var(--aquamarine-900)",
+    background: "var(--aquamarine-800)",
     color: "var(--aquamarine-200)",
   },
 }

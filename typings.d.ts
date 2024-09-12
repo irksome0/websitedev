@@ -1,3 +1,4 @@
+import { User } from "@supabase/supabase-js";
 
 // biome-ignore lint/correctness/noUnusedVariables: type
 interface OptionButtonProps {
@@ -9,17 +10,15 @@ interface OptionButtonProps {
 // biome-ignore lint/correctness/noUnusedVariables: type
 interface HeaderProps {
   active: string;
-  user: UserState;
+  user: User | null;
 }
-interface UserState {
-  name: string | undefined;
-  surname: string | undefined;
-  email: string | undefined;
-}
+
 // biome-ignore lint/correctness/noUnusedVariables: type
 interface PopupProps {
   open: boolean;
-  user: UserState;
+  user: User | null;
+  fullname: string | null;
+  avatar_url: string | null;
 }
 
 // biome-ignore lint/correctness/noUnusedVariables: type
@@ -98,4 +97,9 @@ interface SalesPageParams{
 // biome-ignore lint/correctness/noUnusedVariables: type
 interface PagesSwitchPanelProps{
   amountOfPages: number;
+}
+// biome-ignore lint/correctness/noUnusedVariables: type
+interface SettingsModalProps{
+  close: () => void;
+  user: User | null;
 }

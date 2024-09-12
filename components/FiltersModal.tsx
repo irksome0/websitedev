@@ -32,11 +32,6 @@ export const FiltersModal = (props: FiltersModalProps) => {
       genderFiltersRef.current &&
       countryFiltersRef.current
     ) {
-      // console.log(
-      //   collaborationFiltersRef.current,
-      //   genderFiltersRef.current,
-      //   countryFiltersRef.current
-      // );
       genderFiltersRef.current.applyFilters();
       countryFiltersRef.current.applyFilters();
       collaborationFiltersRef.current.applyFilters();

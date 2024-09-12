@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { buttonVariants } from "@/components/variants/buttonsVariants";
+import { applyButtonVariants } from "@/components/variants/buttonsVariants";
 import Link from "next/link";
 import { signin } from "./actions";
 
@@ -13,8 +13,9 @@ export default function Signin() {
   };
 
   return (
+    <>
     <main className="flex flex-col items-center justify-center bg-bg-tertiary pt-4 h-screen">
-      <div className="w-1/5 flex flex-col shadow-md items-center justify-center border-2 border-border-secondary rounded-3xl px-3 py-10 bg-bg-secondary">
+      <div className="flex flex-col shadow-md items-center justify-center border-2 border-border-secondary rounded-3xl px-16 py-10 bg-bg-secondary">
         <h1 className="text-txt-primary font-black text-header-2 mb-5">
           Sign In
         </h1>
@@ -56,11 +57,11 @@ export default function Signin() {
           </div>
 
           <motion.button
-            variants={buttonVariants}
+            variants={applyButtonVariants}
             whileHover="hover"
             whileTap="tap"
             formAction={signin}
-            className="flex cursor-pointer outline-border-primary outline-offset-2 outline-2 focus: z-10 flex-row items-center justify-center gap-1 rounded-[12px] border bg-bg-secondary px-5 py-2 font-bold text-button text-txt-secondary mt-4"
+            className="flex cursor-pointer text-txt-on outline-border-onbrand-primary outline-offset-2 outline-2 focus: z-10 flex-row items-center justify-center gap-1 rounded-[12px] border bg-bg-button-brand-secondary px-5 py-2 font-bold text-button mt-4"
           >
             Confirm
           </motion.button>
@@ -74,5 +75,6 @@ export default function Signin() {
         </Link>
       </div>
     </main>
+    </>
   );
 }

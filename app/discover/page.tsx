@@ -19,11 +19,7 @@ export default async function Discover() {
       <FiltersStoreProvider>
         <Header
           active="discover"
-          user={{
-            name: "user",
-            surname: "",
-            email: data.user.email,
-          }}
+          user={data.user}
         />
         <Search />
         <Footer />

@@ -18,7 +18,6 @@ export const OrderModule = (props: OrderModuleProps) => {
   // const [attachments, setAttachments] = useState([]);
   // const [inputValues, setInputValues] = useState([]);
 
-  // biome-ignore lint/correctness/noUnusedVariables: <explanation>
   const handleChangeAttachments = (event: any) => {
     // setInputValues([...inputValues, event.target.value]);
     // console.log(inputValues);
