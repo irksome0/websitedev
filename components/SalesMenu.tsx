@@ -32,7 +32,7 @@ export const SalesMenu = () => {
           specialIcon={element.specialIcon}
           special={element.special}
           page={element.page}
-          setPage={(val) => setPage(val)}
+          setPage={(val:number) => setPage(val)}
         />
       ))}
     </nav>

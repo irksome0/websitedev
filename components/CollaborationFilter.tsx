@@ -1,6 +1,7 @@
 import { forwardRef, useImperativeHandle, useState } from "react";
 import { OptionButton } from "./OptionButton";
 import { useFitlersStore } from "@/providers/filtersStoreProvider";
+import { type CollaborationState } from "@/typings";
 
 const collaborationsDefaultState: CollaborationState = {
   m4m: false,

@@ -7,6 +7,7 @@ import chatBubblesIcon from "@/public/chat-bubbles.svg";
 import Image from "next/image";
 import { useState } from "react";
 import { OrderProgress } from "./OrderProgress";
+import { type OrderModuleProps } from "@/typings";
 
 const initialAttachmentsState = {
   attachments: [],

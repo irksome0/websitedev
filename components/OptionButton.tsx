@@ -3,6 +3,7 @@ import {
   disabledOptionsVariants,
   optionsVariants,
 } from "./variants/optionsVariants";
+import { type OptionButtonProps } from "@/typings";
 
 export const OptionButton = (props: OptionButtonProps) => {
   if (props.active) {

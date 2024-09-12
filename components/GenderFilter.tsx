@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect, forwardRef, useImperativeHandle } from "react";
-import { useFitlersStore } from "@/providers/filtersStoreProvider"; // Adjust the import to your store's path
-import { OptionButton } from "./OptionButton"; // Adjust the import to your OptionButton's path
+import { useFitlersStore } from "@/providers/filtersStoreProvider";
+import { OptionButton } from "./OptionButton";
+import { GendersProps } from "@/typings";
 
 const gendersDefaultState = {
   male: false,

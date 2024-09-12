@@ -9,6 +9,7 @@ import { CountryFilter } from "./CountryFilter";
 import { GenderFilter } from "./GenderFilter";
 import { CollaborationFilter } from "./CollaborationFilter";
 import { useRef } from "react";
+import { type FiltersModalProps } from "@/typings";
 
 export const FiltersModal = (props: FiltersModalProps) => {
   const collaborationFiltersRef = useRef<any>();

@@ -5,6 +5,7 @@ import {
   buttonVariants,
   logoutButtonVariants,
 } from "./variants/buttonsVariants";
+import { type OrderProgressProps } from "@/typings";
 
 export const OrderProgress = (props: OrderProgressProps) => {
   if (props.type === "submitted") {

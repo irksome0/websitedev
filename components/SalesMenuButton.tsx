@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { buttonVariants } from "./variants/buttonsVariants";
+import { type SalesMenuButtonProps } from "@/typings";
 
 export const SalesMenuButton = (props: SalesMenuButtonProps) => {
   if (props.active) {

@@ -1,5 +1,6 @@
 import { redirectTo } from "@/utils/redirectTo";
 import { usePathname } from "next/navigation";
+import { type PagesSwitchPanelProps } from "@/typings";
 
 export const PagesSwitchPanel = (props: PagesSwitchPanelProps) => {
   const pathname = usePathname();

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { liVariants, hrVariants } from "./variants/headerVariants";
 import { pVariants } from "./variants/headerVariants";
 import { redirectTo } from "@/utils/redirectTo";
+import { type NavigationItemProps } from "@/typings";
 
 export const NavigationItem = (props: NavigationItemProps) => {
   // const router = useRouter();
