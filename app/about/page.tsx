@@ -15,11 +15,7 @@ export default async function About() {
     <main className="flex flex-col items-center bg-bg-tertiary px-5 pt-4">
       <Header
         active="about"
-        user={{
-          name: "User",
-          surname: "",
-          email: data.user.email,
-        }}
+        user={data.user}
       />
       About
       <Footer />

@@ -7,6 +7,7 @@ import { Orders } from "@/components/Orders";
 import { createClient } from "@/utils/supabase/server";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { type SalesPageParams } from "@/typings";
 
 export async function generateStaticParams() {
   return [{ pageId: "1" }];
@@ -28,11 +29,7 @@ export default async function SalesPage({
       <SalesStoreProvider>
         <Header
           active="sales"
-          user={{
-            name: "user",
-            surname: "",
-            email: data.user.email,
-          }}
+          user={data.user}
         />
         <section className="flex w-full flex-col items-center justify-center px-5 py-8">
           <h1 className="mb-5 font-medium text-header-2 text-txt-secondary">
